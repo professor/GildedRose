@@ -4,7 +4,7 @@ require "rspec"
 describe GildedRose do
 
   it "should do something" do
-    subject.updateQuality
+    subject.update_quality
   end
 
 
