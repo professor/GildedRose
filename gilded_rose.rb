@@ -14,53 +14,53 @@ class GildedRose
     @items << Item.new("Conjured Mana Cake", 3, 6)
   end
 
-  def self.updateQuality 
+  def updateQuality
 
-    @items.each do |item|
-      if ((!"Aged Brie".equals(item.getName())) && !"Backstage passes to a TAFKAL80ETC concert".equals(item.getName()))
-        if (item.getQuality() > 0)
-          if (!"Sulfuras, Hand of Ragnaros".equals(item.getName()))
-            item.setQuality(item.getQuality() - 1);
+    for i in 0..(@items.size-1)
+      if ((!"Aged Brie".eql?(@items[i].name)) && !"Backstage passes to a TAFKAL80ETC concert".eql?(@items[i].name))
+        if (@items[i].quality > 0)
+          if (!"Sulfuras, Hand of Ragnaros".eql?(@items[i].name))
+            @items[i].quality = @items[i].quality - 1;
           end
         end
       else
-        if (item.getQuality() < 50)
-          item.setQuality(item.getQuality() + 1);
+        if (@items[i].quality < 50)
+          @items[i].quality = @items[i].quality + 1;
 
-          if ("Backstage passes to a TAFKAL80ETC concert".equals(item.getName()))
-            if (item.getSellIn() < 11)
-              if (item.getQuality() < 50)
-                item.setQuality(item.getQuality() + 1);
+          if ("Backstage passes to a TAFKAL80ETC concert".eql?(@items[i].name))
+            if (@items[i].sellIn < 11)
+              if (@items[i].quality < 50)
+                @items[i].quality(@items[i].quality + 1);
               end
             end
 
-            if (item.getSellIn() < 6)
-              if (item.getQuality() < 50)
-                item.setQuality(item.getQuality() + 1);
+            if (@items[i].sellIn < 6)
+              if (@items[i].quality < 50)
+                @items[i].quality(@items[i].quality + 1);
               end
             end
           end
         end
       end
 
-      if (!"Sulfuras, Hand of Ragnaros".equals(item.getName()))
-        item.setSellIn(item.getSellIn() - 1);
+      if (!"Sulfuras, Hand of Ragnaros".eql?(@items[i].name))
+        @items[i].sellIn = @items[i].sellIn - 1;
       end
 
-      if (item.getSellIn() < 0)
-        if (!"Aged Brie".equals(item.getName()))
-          if (!"Backstage passes to a TAFKAL80ETC concert".equals(item.getName()))
-            if (item.getQuality() > 0)
-              if (!"Sulfuras, Hand of Ragnaros".equals(item.getName()))
-                item.setQuality(item.getQuality() - 1);
+      if (@items[i].sellIn < 0)
+        if (!"Aged Brie".eql?(@items[i].name))
+          if (!"Backstage passes to a TAFKAL80ETC concert".eql?(@items[i].name))
+            if (@items[i].quality > 0)
+              if (!"Sulfuras, Hand of Ragnaros".eql?(@items[i].name))
+                @items[i].quality(@items[i].quality - 1);
               end
             end
           else
-            item.setQuality(item.getQuality() - item.getQuality());
+            @items[i].quality(@items[i].quality - @items[i].quality);
           end
         else
-          if (item.getQuality() < 50)
-            item.setQuality(item.getQuality() + 1);
+          if (@items[i].quality < 50)
+            @items[i].quality(@items[i].quality + 1);
           end
         end
       end
