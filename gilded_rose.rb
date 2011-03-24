@@ -11,7 +11,7 @@ class GildedRose
     items << Item("Conjured Mana Cake", 3, 6)
   end
 
-  self.def updateQuality do
+  def self.updateQuality 
 
     @items.each do |item|
       if ((!"Aged Brie".equals(item.getName())) && !"Backstage passes to a TAFKAL80ETC concert".equals(item.getName()))
