@@ -28,13 +28,13 @@ class GildedRose
           @items[i].quality = @items[i].quality + 1;
 
           if ("Backstage passes to a TAFKAL80ETC concert".eql?(@items[i].name))
-            if (@items[i].sellIn < 11)
+            if (@items[i].sell_in < 11)
               if (@items[i].quality < 50)
                 @items[i].quality(@items[i].quality + 1);
               end
             end
 
-            if (@items[i].sellIn < 6)
+            if (@items[i].sell_in < 6)
               if (@items[i].quality < 50)
                 @items[i].quality(@items[i].quality + 1);
               end
@@ -44,10 +44,10 @@ class GildedRose
       end
 
       if (!"Sulfuras, Hand of Ragnaros".eql?(@items[i].name))
-        @items[i].sellIn = @items[i].sellIn - 1;
+        @items[i].sell_in = @items[i].sell_in - 1;
       end
 
-      if (@items[i].sellIn < 0)
+      if (@items[i].sell_in < 0)
         if (!"Aged Brie".eql?(@items[i].name))
           if (!"Backstage passes to a TAFKAL80ETC concert".eql?(@items[i].name))
             if (@items[i].quality > 0)
