@@ -1,6 +1,6 @@
 If you want to get cracking on the ruby source then do this:
 
-  git clone git@github.com:professor/GildedRose.git
+    git clone git@github.com:professor/GildedRose.git
 
 Hi and welcome to team Gilded Rose.
 
@@ -57,4 +57,4 @@ Just for clarification, an item can never have its Quality increase above 50,
 however "Sulfuras" is a legendary item and as such its Quality is 80 and it
 never alters.
 
-Source: http://www.iamnotmyself.com/2011/02/13/RefactorThisTheGildedRoseKata.aspx
+Source: <http://www.iamnotmyself.com/2011/02/13/RefactorThisTheGildedRoseKata.aspx>
