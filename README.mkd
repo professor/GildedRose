@@ -57,4 +57,4 @@ Just for clarification, an item can never have its Quality increase above 50,
 however "Sulfuras" is a legendary item and as such its Quality is 80 and it
 never alters.
 
-Source: <http://www.iamnotmyself.com/2011/02/13/RefactorThisTheGildedRoseKata.aspx>
+Source: <http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/>
