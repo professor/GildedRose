@@ -57,7 +57,6 @@ describe GildedRose do
       end
     end
 
-
     context "when an item is legendary (Sulfuras)" do
       it "should not change the quality" do
         item = rose.items.select { |i| i.name == legendary.name }.first

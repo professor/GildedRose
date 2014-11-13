@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-13T11:29:25-06:00">2014-11-13T11:29:25-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-13T11:31:47-06:00">2014-11-13T11:31:47-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.59
+         5.57
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>17</b> files in total.
-    <b>268</b> relevant lines. 
-    <span class="green"><b>268</b> lines covered</span> and
+    <b>269</b> relevant lines. 
+    <span class="green"><b>269</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -133,9 +133,9 @@
       <tr>
         <td class="strong"><a href="#2b9dfc7a15428876fd34016f697e6d8616e51f2c" class="src_link" title="spec/gilded_rose_spec.rb">spec/gilded_rose_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>105</td>
-        <td>75</td>
-        <td>75</td>
+        <td>106</td>
+        <td>76</td>
+        <td>76</td>
         <td>0</td>
         <td>2.2</td>
       </tr>
@@ -1651,8 +1651,8 @@
     <h3>spec/gilded_rose_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>75</b> relevant lines. 
-      <span class="green"><b>75</b> lines covered</span> and
+      <b>76</b> relevant lines. 
+      <span class="green"><b>76</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1855,436 +1855,442 @@
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should never lower the quality of the item to negative&quot; do</code>
+          <code class="ruby">    context &quot;when ensuring that items quality never go negative or over 50&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="34">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      item = rose.items.select { |i| i.name == regular.name }.first</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">      quality = item.quality</code>
+          <code class="ruby">      it &quot;should never lower the quality of the item to negative&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="35">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        item = rose.items.select { |i| i.name == regular.name }.first</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">      item.quality = 0</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">      rose.update_quality</code>
+          <code class="ruby">        item.quality = 0</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(item.quality).to be &lt;= 0</code>
+          <code class="ruby">        rose.update_quality</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        expect(item.quality).to be &lt;= 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;should not have a quality over 50&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="42">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      item = rose.items.select { |i| i.name == aged_brie.name }.first</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      quality = item.quality</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      item.quality = 50</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      rose.update_quality</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(item.quality).to be &lt;= 50</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">    context &quot;when an item is an Aged Brie&quot; do</code>
+          <code class="ruby">      it &quot;should not have a quality over 50&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &quot;should increase the quality if the item Age of Brie the older it gets&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="51">
+        <li class="covered" data-hits="7" data-linenumber="43">
           <span class="hits">7</span>
           
           <code class="ruby">        item = rose.items.select { |i| i.name == aged_brie.name }.first</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">        quality = item.quality</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        item.quality = 50</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">        rose.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(item.quality).to be &lt;= 50</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &quot;when an item is an Aged Brie&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;should increase the quality if the item Age of Brie the older it gets&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="53">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        item = rose.items.select { |i| i.name == aged_brie.name }.first</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
+          <code class="ruby">        quality = item.quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        rose.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
           <code class="ruby">        expect(item.quality).to eq(quality + 1)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="59">
           
-          <code class="ruby">    context &quot;when an item is legendary (Sulfuras)&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
+          <code class="ruby">    context &quot;when an item is legendary (Sulfuras)&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
           <code class="ruby">      it &quot;should not change the quality&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="61">
+        <li class="covered" data-hits="7" data-linenumber="62">
           <span class="hits">7</span>
           
           <code class="ruby">        item = rose.items.select { |i| i.name == legendary.name }.first</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">        sell_in = item.sell_in</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        sell_in = item.sell_in</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(item.quality).to eq(quality)</code>
+          <code class="ruby">        rose.update_quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
+          <code class="ruby">        expect(item.quality).to eq(quality)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
           <code class="ruby">        expect(item.sell_in).to eq(sell_in)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;should not change the sell in date&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="69">
+        <li class="covered" data-hits="7" data-linenumber="70">
           <span class="hits">7</span>
           
           <code class="ruby">        item = rose.items.select { |i| i.name == legendary.name }.first</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        quality = item.quality</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
-          <code class="ruby">        sell_in = item.sell_in</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        sell_in = item.sell_in</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(item.quality).to eq(quality)</code>
+          <code class="ruby">        rose.update_quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(item.sell_in).to eq(sell_in)</code>
+          <code class="ruby">        expect(item.quality).to eq(quality)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        expect(item.sell_in).to eq(sell_in)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
+        <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
           <code class="ruby">    context &quot;when the item is a &#39;Back Stage Pass&#39;&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="79">
+        <li class="covered" data-hits="29" data-linenumber="80">
           <span class="hits">29</span>
           
           <code class="ruby">      let(:item) { rose.items.select { |i| i.name == tickets.name }.first }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;increases it&#39;s quality as it&#39;s sell in date approaches&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        quality = item.quality</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
+          <code class="ruby">        rose.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
           <code class="ruby">        expect(item.quality).to eq(quality + 1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &quot;quality increases by 2 when there are 10 days or less&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
-          <code class="ruby">        quality = item.quality</code>
+          <code class="ruby">      it &quot;quality increases by 2 when there are 10 days or less&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="87">
           <span class="hits">1</span>
           
-          <code class="ruby">        item.sell_in = rand(6..10)</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        item.sell_in = rand(6..10)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
+          <code class="ruby">        rose.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
+          
           <code class="ruby">        expect(item.quality).to eq(quality + 2)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="91">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &quot;quality increases by 3 when there are 5 days or less&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
-          <code class="ruby">        quality = item.quality</code>
+          <code class="ruby">      it &quot;quality increases by 3 when there are 5 days or less&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
-          <code class="ruby">        item.sell_in = rand(1..5)</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        item.sell_in = rand(1..5)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
+          <code class="ruby">        rose.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
           <code class="ruby">        expect(item.quality).to eq(quality + 3)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="97">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="97">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &quot;quality drops to 0 after the sell in date (concert)&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
-          <code class="ruby">        quality = item.quality</code>
+          <code class="ruby">      it &quot;quality drops to 0 after the sell in date (concert)&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">        item.sell_in = 0</code>
+          <code class="ruby">        quality = item.quality</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
-          <code class="ruby">        rose.update_quality</code>
+          <code class="ruby">        item.sell_in = 0</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(item.quality).to eq(quality - quality)</code>
+          <code class="ruby">        rose.update_quality</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        expect(item.quality).to eq(quality - quality)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
           
           
           <code class="ruby">end</code>
