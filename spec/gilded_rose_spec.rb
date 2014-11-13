@@ -30,20 +30,22 @@ describe GildedRose do
       end
     end
 
-    it "should never lower the quality of the item to negative" do
-      item = rose.items.select { |i| i.name == regular.name }.first
-      quality = item.quality
-      item.quality = 0
-      rose.update_quality
-      expect(item.quality).to be <= 0
-    end
+    context "when ensuring that items quality never go negative or over 50" do
+      it "should never lower the quality of the item to negative" do
+        item = rose.items.select { |i| i.name == regular.name }.first
+        quality = item.quality
+        item.quality = 0
+        rose.update_quality
+        expect(item.quality).to be <= 0
+      end
 
-    it "should not have a quality over 50" do
-      item = rose.items.select { |i| i.name == aged_brie.name }.first
-      quality = item.quality
-      item.quality = 50
-      rose.update_quality
-      expect(item.quality).to be <= 50
+      it "should not have a quality over 50" do
+        item = rose.items.select { |i| i.name == aged_brie.name }.first
+        quality = item.quality
+        item.quality = 50
+        rose.update_quality
+        expect(item.quality).to be <= 50
+      end
     end
 
     context "when an item is an Aged Brie" do
