@@ -5,7 +5,7 @@ RSpec.describe Items::Tickets do
     context "when sell_in date is 0" do
       it "returns a value of -1" do
         item = Items::Tickets.new("Backstage passes to a TAFKAL80ETC concert", 15, 20)
-        item.sell_in = rand(-10..0)
+        item.sell_in = 0
         expect(item.send(:quality_change)).to eq -item.quality
       end
     end
