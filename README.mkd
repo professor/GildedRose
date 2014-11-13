@@ -1,3 +1,8 @@
+CREDITS:
+
+Zach Taylor - https://github.com/taylorzr/GildedRose
+Riley Rook - https://github.com/aerook/gilded_rose
+
 If you want to get cracking on the ruby source then do this:
 
     git clone git@github.com:professor/GildedRose.git
