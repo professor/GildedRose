@@ -1,5 +1,4 @@
-require './gilded_rose.rb'
-require "rspec"
+require 'gilded_rose.rb'
 
 describe GildedRose do
 
