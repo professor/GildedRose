@@ -1,6 +1,8 @@
-require './item.rb'
+require 'item.rb'
 
 class GildedRose
+
+  attr_reader :items
 
   @items = []
 
